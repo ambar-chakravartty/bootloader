@@ -8,8 +8,12 @@
 mov bx,msg
 call print
 
+mov bx,num
+call print_hex
+
 
 msg: db "hello world!",0
+num: db "0xFFFF",0
 
 times 510-($-$$) db 0
 
